@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>precious meows</title>
+    <link rel="icon" href="../img/icon.png" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"> 
+    <link href="../style.css" rel="stylesheet" type="text/css" media="all">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700');
+</style>
+  </head>
+  <body>
+    <div class="container about-layout">
+        <div class="about-center-wrapper">
+<div class="roof-container">
+<img src="../img/roof.png" class="roof">
+<div class="about-content-box">
+    <table class="cat-house">
+  <tr>
+    <td colspan="2" class="house-title">
+<div class="carousel-container">
+<img id="randomImage" src="" onclick="displayRandomImage()">
+</div>
+      <h2>louie said ..</h2>
+    <div class="the-meows rooms">
+        <p id="meow-text">mrrrp ! prrt ?</p>
+        <br>
+          <button class="translate-button" onclick="translateMeow()">
+          translate
+          </button>
+    </div>
+
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="house-title">
+      <a href="javascript:history.go(-1)">← back</a>
+    </td>
+  </tr>
+</table>
+    </div>
+    </div>
+</div>
+<script>
+  function translateMeow() {
+    const text = document.getElementById("meow-text");
+    const button = document.querySelector(".translate-button");
+
+    if (button.dataset.translated === "true") {
+      text.textContent = "mrrrp ! prrt ?";
+      button.textContent = "translate";
+      button.dataset.translated = "false";
+    } else {
+      text.textContent =
+        "“ look, a little piece of paper ! may i keep it ? ”";
+      button.textContent = "↶ meow again";
+      button.dataset.translated = "true";
+    }
+  }
+</script>
+  <script src="../script.js"></script>
+  <script src="../carousel-louie.js"></script>
+  </body>
+</html>
