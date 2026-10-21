@@ -279,7 +279,8 @@ body:has(.about-layout) {
 .out-links {
   padding: 30px 10px 30px 10px;
   height: 100%;
-  text-align: right;
+  text-align: center;
+  line-height: 18px;
   vertical-align: middle !important;
 }
 
